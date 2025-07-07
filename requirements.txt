@@ -1,0 +1,5 @@
+# Google Maps API
+googlemaps==4.10.0
+
+# Environment variables
+python-dotenv==1.0.0 
