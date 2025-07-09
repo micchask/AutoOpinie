@@ -1,11 +1,11 @@
 # AutoOpinie - Simple Google Maps Reviews Tool
 
-Prosty program do pobierania opinii z Google Maps z ostatnich 7 dni.
+Prosty program do pobierania opinii z Google Maps (maksymalnie 5 opinii, wg ograniczeń API).
 
 ## Opis
 AutoOpinie to prosty program Python, który:
 - Łączy się z Google Maps API
-- Pobiera opinie z ostatnich 7 dni dla wybranego miejsca
+- Pobiera maksymalnie 5 opinii dla wybranego miejsca (zgodnie z ograniczeniami API)
 - Generuje prosty tekst z nazwą miejsca i opiniami wraz z ocenami
 
 ## Struktura plików
@@ -23,36 +23,25 @@ AutoOpinie/
 ```bash
 pip install -r requirements.txt
 ```
-
 2. **Skonfiguruj Google Maps API:**
-   - Idź do https://console.cloud.google.com/
-   - Utwórz nowy projekt lub wybierz istniejący
-   - Włącz API: Places API, Geocoding API
-   - Utwórz klucz API
-   - Skopiuj klucz API
-
-3. **Uruchom program:**
-```bash
-python main.py
-```
-
+   - pobierz klucz api 
 ## Użycie
 
-1. Uruchom program: `python main.py`
+1. Uruchom program: `python3 main.py`
 2. Podaj nazwę miejsca (np. "Restauracja XYZ")
-3. Program wyświetli opinie z ostatnich 7 dni z ocenami gwiazdkowymi
+3. Program wyświetli do 5 opinii (zgodnie z ograniczeniami API) z ocenami gwiazdkowymi
 
 ## Przykład wyjścia
 ```
 Nazwa miejsca: Restauracja XYZ
 
-⭐⭐⭐⭐⭐ Jan Kowalski
+5/5 Jan Kowalski
 Świetna restauracja! Jedzenie pyszne, obsługa miła.
 
-⭐⭐⭐⭐ Anna Nowak  
+4/5 Anna Nowak  
 Dobra restauracja, ale trochę drogo.
 
-⭐⭐⭐ Piotr Wiśniewski
+3/5 Piotr Wiśniewski
 Przeciętna jakość, nic specjalnego.
 ```
 
@@ -60,3 +49,7 @@ Przeciętna jakość, nic specjalnego.
 - Python 3.8+
 - Google Maps API key
 - Zainstalowane zależności z requirements.txt
+
+## Podsumowanie 
+Program miał wyświetlać opinie sprzed ostatniu 7 dni lecz okazało się, ze googlemaps api
+ma ograniczenie do wyswietlania tylko 5 opinii bazowanych na wyborze api

@@ -38,10 +38,9 @@ python main.py
 
 ## Przykład pliku .env
 ```
-GOOGLE_MAPS_API_KEY=AIzaSyC1234567890abcdefghijklmnopqrstuvwxyz
+GOOGLE_MAPS_API_KEY=adzasyC1234567890abcdefghijklmnopqrstuvwxyz
 ```
 
 ## Uwaga
-- Klucz API jest darmowy dla pierwszych 1000 zapytań dziennie
 - Nie udostępniaj swojego klucza API publicznie
 - Możesz ograniczyć klucz API do konkretnych API w Google Cloud Console 
